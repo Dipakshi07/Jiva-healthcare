@@ -1,0 +1,162 @@
+/* OrderTable.css */
+
+.order-table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  margin-top: 25px;
+}
+
+/* TABLE */
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+/* HEADER */
+
+.order-table thead {
+  background: #eff6ff;
+}
+
+.order-table th {
+  padding: 20px 24px;
+  text-align: left;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #dbeafe;
+  white-space: nowrap;
+}
+
+/* BODY */
+
+.order-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* ROW HOVER */
+
+.order-table tbody tr {
+  transition: 0.3s;
+}
+
+.order-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ORDER ID */
+
+.order-table td:first-child {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* AMOUNT */
+
+.order-table td:nth-child(3) {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* STATUS */
+
+.order-table td:last-child {
+  font-weight: 600;
+}
+
+/* STATUS COLORS */
+
+.status-delivered {
+  color: #16a34a;
+}
+
+.status-pending {
+  color: #d97706;
+}
+
+.status-cancelled {
+  color: #dc2626;
+}
+
+.status-processing {
+  color: #2563eb;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .order-table {
+    min-width: 100%;
+  }
+
+  .order-table thead {
+    display: none;
+  }
+
+  .order-table,
+  .order-table tbody,
+  .order-table tr,
+  .order-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .order-table tr {
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .order-table td {
+    text-align: right;
+    position: relative;
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .order-table td:last-child {
+    border-bottom: none;
+  }
+
+  .order-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    font-weight: 600;
+    color: #334155;
+    text-align: left;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .order-table-container {
+    border-radius: 14px;
+  }
+
+  .order-table tr {
+    padding: 12px;
+  }
+
+  .order-table td {
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+
+}

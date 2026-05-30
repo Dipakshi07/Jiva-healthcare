@@ -1,0 +1,82 @@
+/* MainLayout.css */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #f8fafc;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* PAGE CONTENT */
+
+.page-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background: #f8fafc;
+  transition: 0.3s ease;
+}
+
+/* CUSTOM SCROLLBAR */
+
+.page-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.page-content::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 20px;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 20px;
+}
+
+.page-content::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .page-content {
+    padding: 22px;
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+  .page-content {
+    padding: 18px;
+  }
+
+}

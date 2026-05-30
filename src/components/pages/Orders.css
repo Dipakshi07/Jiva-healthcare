@@ -1,0 +1,91 @@
+/* Orders.css */
+
+.orders-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+/* PAGE TITLE */
+
+.orders-page h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* TITLE UNDERLINE */
+
+.orders-page h1::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #2563eb;
+  display: block;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+/* TABLE SECTION */
+
+.orders-table-wrapper {
+  margin-top: 25px;
+  animation: slideFade 0.5s ease;
+}
+
+/* ANIMATION */
+
+@keyframes slideFade {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+  .orders-page {
+    padding: 22px;
+  }
+
+  .orders-page h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .orders-page {
+    padding: 18px;
+  }
+
+  .orders-page h1 {
+    font-size: 24px;
+  }
+
+  .orders-page h1::after {
+    width: 55px;
+    height: 3px;
+  }
+
+  .orders-table-wrapper {
+    margin-top: 20px;
+  }
+
+}

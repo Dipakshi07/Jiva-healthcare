@@ -1,0 +1,200 @@
+/* src/components/dashboard/RecentActivity.css */
+
+.recent-activity {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  margin-top: 30px;
+}
+
+/* HEADER */
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.activity-header h2 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.activity-header p {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+.view-all-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.view-all-btn:hover {
+  background: #1d4ed8;
+}
+
+/* LIST */
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* CARD */
+
+.activity-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 18px 20px;
+  border-radius: 14px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.activity-card:hover {
+  border-color: #dbeafe;
+  transform: translateY(-2px);
+}
+
+/* LEFT */
+
+.activity-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.activity-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.activity-info h4 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.activity-info p {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* RIGHT */
+
+.activity-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.activity-right small {
+  color: #64748b;
+}
+
+/* STATUS */
+
+.activity-status {
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* STATUS COLORS */
+
+.completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.success {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.cancelled {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .activity-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .activity-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .activity-right {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .recent-activity {
+    padding: 18px;
+  }
+
+  .activity-left {
+    gap: 12px;
+  }
+
+  .activity-avatar {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .activity-info h4 {
+    font-size: 15px;
+  }
+
+  .activity-info p {
+    font-size: 13px;
+  }
+
+  .view-all-btn {
+    width: 100%;
+  }
+
+}

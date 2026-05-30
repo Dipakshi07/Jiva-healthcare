@@ -1,0 +1,152 @@
+/* src/components/dashboard/RevenueChart.css */
+
+.revenue-chart-container {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  margin-top: 30px;
+}
+
+/* HEADER */
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.chart-header h2 {
+  margin: 0;
+  color: #0f172a;
+}
+
+.chart-header p {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+/* BUTTON */
+
+.report-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.report-btn:hover {
+  background: #1d4ed8;
+}
+
+/* STATS */
+
+.chart-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background: #f8fafc;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  transition: 0.3s;
+}
+
+.chart-card:hover {
+  transform: translateY(-3px);
+}
+
+.chart-card h4 {
+  color: #64748b;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.chart-card h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 30px;
+}
+
+.chart-card span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* CHART */
+
+.chart-wrapper {
+  width: 100%;
+  height: 400px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding-top: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+  .chart-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chart-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-wrapper {
+    height: 320px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .revenue-chart-container {
+    padding: 18px;
+  }
+
+  .chart-header h2 {
+    font-size: 22px;
+  }
+
+  .chart-card {
+    padding: 18px;
+  }
+
+  .chart-card h2 {
+    font-size: 24px;
+  }
+
+  .report-btn {
+    width: 100%;
+  }
+
+  .chart-wrapper {
+    height: 280px;
+  }
+
+}

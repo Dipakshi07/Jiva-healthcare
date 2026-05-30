@@ -1,0 +1,87 @@
+/* FamilyMembers.css */
+
+.family-members-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+/* PAGE TITLE */
+
+.family-members-page h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* TITLE UNDERLINE */
+
+.family-members-page h1::after {
+  content: "";
+  width: 75px;
+  height: 4px;
+  background: #2563eb;
+  display: block;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+/* TABLE WRAPPER */
+
+.family-table-wrapper {
+  margin-top: 25px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+  .family-members-page {
+    padding: 22px;
+  }
+
+  .family-members-page h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .family-members-page {
+    padding: 18px;
+  }
+
+  .family-members-page h1 {
+    font-size: 24px;
+  }
+
+  .family-members-page h1::after {
+    width: 55px;
+    height: 3px;
+  }
+
+}

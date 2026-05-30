@@ -1,0 +1,114 @@
+/* Dashboard.css */
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+/* PAGE TITLE */
+
+.dashboard h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* OPTIONAL TITLE LINE */
+
+.dashboard h1::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #2563eb;
+  display: block;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+/* STATS GRID */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* OPTIONAL CARD ANIMATION */
+
+.stats-grid > * {
+  animation: fadeUp 0.5s ease;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* LARGE TABLETS */
+
+@media (max-width: 1200px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    padding: 22px;
+  }
+
+  .dashboard h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+  .dashboard {
+    padding: 18px;
+  }
+
+  .dashboard h1 {
+    font-size: 24px;
+  }
+
+  .dashboard h1::after {
+    width: 55px;
+    height: 3px;
+  }
+
+  .stats-grid {
+    gap: 16px;
+  }
+
+}
